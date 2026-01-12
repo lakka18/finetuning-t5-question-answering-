@@ -17,8 +17,8 @@ This project implements an end-to-end Question Answering (QA) system using T5-ba
 ## Dataset: SQuAD v1.1
 
 ### Statistics
-- **Training samples:** 87,599
-- **Validation samples:** 10,570
+- **Training samples:** 10000
+- **Validation samples:** 1000
 - **Source:** `rajpurkar/squad` from HuggingFace Datasets
 
 ### Data Structure
@@ -258,25 +258,6 @@ The notebook generates several visualizations:
 
 ---
 
-## Key Findings
-
-### Strengths
-- **Generative Capability:** Can rephrase answers while maintaining correctness
-- **Context Understanding:** Effectively extracts information from long paragraphs
-- **Short Answers:** Learns to generate concise, appropriate-length answers
-
-### Observations
-- T5's text-to-text format simplifies QA implementation
-- Beam search significantly improves answer quality over greedy decoding
-- Model learns answer length patterns from training data
-
-### Challenges
-- Long contexts (>400 words) may be truncated due to 512 token limit
-- Complex multi-word entities sometimes partially generated
-- Paraphrased correct answers reduce Exact Match score despite being valid
-
----
-
 ## Requirements
 
 ### Python Packages
@@ -308,16 +289,6 @@ seaborn
 4. **Data Augmentation:** Add paraphrased questions for robustness
 5. **Multi-answer Support:** Handle questions with multiple valid answers
 6. **Error Analysis:** Analyze failure cases systematically
-
----
-
-## References
-
-- **T5 Paper:** Raffel et al. (2020). [Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer](https://arxiv.org/abs/1910.10683)
-- **SQuAD Paper:** Rajpurkar et al. (2016). [SQuAD: 100,000+ Questions for Machine Comprehension of Text](https://arxiv.org/abs/1606.05250)
-- **HuggingFace T5:** [Model Documentation](https://huggingface.co/docs/transformers/model_doc/t5)
-- **SQuAD Dataset:** [Official Website](https://rajpurkar.github.io/SQuAD-explorer/)
-
 ---
 
 ## License
@@ -325,11 +296,3 @@ seaborn
 This project is for educational purposes as part of a Deep Learning for NLP course assignment.
 
 ---
-
-## Notes
-
-- Model checkpoints are automatically saved based on best F1 score
-- Set `SEED=42` for reproducible results
-- Monitor training with TensorBoard: `%tensorboard --logdir /content/logs`
-- Google Drive mounting is optional but recommended for persistent storage
-- The notebook creates a zip file of the trained model for easy download
