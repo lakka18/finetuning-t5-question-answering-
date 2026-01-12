@@ -1,5 +1,9 @@
 # finetuning-t5-question-answering-
 
+---
+Name : Arthur Trageser
+NIM  : 1103223090
+
 # Task 2: Question Answering with T5-base on SQuAD
 
 ## Overview
