@@ -1,8 +1,9 @@
 # finetuning-t5-question-answering-
 
 ---
-- Name : Arthur Trageser
-- NIM  : 1103223090
+- Name    : Arthur Trageser
+- NIM     : 1103223090
+- Class   : DL TK-46-Gab
 ---
 # Task 2: Question Answering with T5-base on SQuAD
 
